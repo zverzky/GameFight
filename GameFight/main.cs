@@ -4,10 +4,10 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Character rogue = new Rogue("Летучий", 20, 100, 100);
-        Character warrior = new Warrior("Воин", 15, 80, 80);
+        Character rogue = new Rogue("Летучий", 10, 100, 100, 20);
+        Character mage = new Mage("Маг", 10, 100, 100, 15);
 
-        Battle battle = new Battle(warrior, rogue);
+        Battle battle = new Battle(mage, rogue);
         battle.StartBattle();
     }
 }

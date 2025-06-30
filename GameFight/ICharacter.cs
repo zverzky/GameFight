@@ -11,7 +11,9 @@ namespace GameFight
         string Name { get; }
         double PowerAttack { get; }
         double Health { get; }
+        double Deffirence { get; }
         void Attack(ICharacter target);
         void TakeDamage(double damage);
+        void SpecialSkill(ICharacter target);
     }
 }
