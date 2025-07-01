@@ -1,6 +1,7 @@
 ﻿using System;
+using GameFight.Interface;
 
-namespace GameFight;
+namespace GameFight.Character;
 
     public class Rogue : Character
     {

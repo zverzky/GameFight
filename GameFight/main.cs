@@ -1,4 +1,4 @@
-﻿using GameFight;
+﻿using GameFight.Battle;
 
 public class Program
 {

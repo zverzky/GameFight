@@ -1,4 +1,4 @@
-﻿using GameFight;
+﻿using GameFight.Interface;
 
 public class Character : ICharacter
 {

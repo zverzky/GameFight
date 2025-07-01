@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameFight;
+namespace GameFight.Battle;
 
 public class Battle
 {
@@ -19,7 +19,7 @@ public class Battle
     public void StartBattle()
     {
         Console.WriteLine($"Бой начинается между {character1.Name} и {character2.Name}");
-        while ((character1.Health > 0) || (character2.Health > 0))
+        while (character1.Health > 0 || character2.Health > 0)
         {
             character1.Attack(character2);
             if (character2.Health <= 0) break;
