@@ -4,10 +4,10 @@ namespace GameFight;
 
     public class Rogue : Character
     {
-        public Rogue(string name, double powerAttack, double health, double maxHealth, double deffirence)
-            : base(name, powerAttack, health, maxHealth, deffirence)
+        public Rogue(string name, double powerAttack, double health, double maxHealth, double deffirence, int level, double expirience)
+            : base(name, powerAttack, health, maxHealth, deffirence, level, expirience)
         {
-            deffirence = 0.2;
+            
         }
 
         public override void Attack(ICharacter target)
@@ -18,6 +18,7 @@ namespace GameFight;
             {
                 attackPower *= 2;
             }
+            target.TakeDamage(attackPower);
             Console.WriteLine($"{this.Name} has a power attack of {attackPower}");
             base.Attack(target);
     }

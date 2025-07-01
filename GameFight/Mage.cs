@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
-using static System.Net.Mime.MediaTypeNames;
-
-namespace GameFight;
+﻿namespace GameFight;
 
 public class Mage : Character
 {
-    public Mage(string name, double powerAttack, double health, double maxHealth,double deffirence)
-        : base(name, powerAttack, health, maxHealth, deffirence)
+    public Mage(string name, double powerAttack, double health, double maxHealth,double deffirence, int level, double expirience)
+        : base(name, powerAttack, health, maxHealth, deffirence, level, expirience)
     {
+        
     }
 
     public override void Attack(ICharacter target)
@@ -23,6 +16,7 @@ public class Mage : Character
         {
             attackPower *= 1.5;
         }
+        target.TakeDamage(attackPower);
         Console.WriteLine($"{this.Name} has a power attack of {attackPower}");
         base.Attack(target);
     }
