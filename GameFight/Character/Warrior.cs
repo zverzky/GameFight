@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GameFight.Interface;
+    using GameFight.Character;
 
 namespace GameFight.Character;
 

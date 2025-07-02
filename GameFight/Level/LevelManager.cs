@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameFight.Interface;
+﻿using GameFight.Experience;
 
-namespace GameFight.Level
+namespace GameFight.Manager
 {
     public class LevelManager
     {
-        private IExperienceProvider experienceProvider;
-        private int level;
-        private int experienceToLevelUp;
+        private ExperienceProvider experienceProvider;
 
-        public int Level => level;
+        public LevelManager(ExperienceProvider experienceProvider)
+        {
+            this.experienceProvider = experienceProvider;
+        }
+
+        public void UpdateLevel(ref int level)
+        {
+            experienceProvider.LevelUp(ref level);
+        }
     }
 }
